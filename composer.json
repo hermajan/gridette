@@ -1,0 +1,39 @@
+{
+	"name": "hermajan/gridette",
+	"description": "Data grid solutions for Nette.",
+	"type": "library",
+	"homepage": "https://hermajan.net/gridette",
+	"support": {
+		"issues": "https://github.com/hermajan/gridette/issues"
+	},
+	"license": "MIT",
+	"autoload": {
+		"psr-4": {
+			"Gridette\\": "src"
+		}
+	},
+	"config": {
+		"sort-packages": true,
+		"optimize-autoloader": true
+	},
+	"scripts": {
+		"phpstan": [
+			"vendor/bin/phpstan analyse src -c tests/phpstan.neon"
+		],
+		"tester": [
+			"php ./vendor/nette/tester/src/tester.php -C -s tests"
+		]
+	},
+	"require": {
+		"php": ">=7.3",
+		"nette/database": "^3.0",
+		"ublaboo/datagrid": "^6.9.5"
+	},
+	"require-dev": {
+		"nette/tester": "^2.0",
+		"nette/utils": "^3.0",
+		"phpstan/phpstan": "^1.7",
+		"phpstan/phpstan-nette": "^1.0",
+		"tracy/tracy": "^2.5"
+	}
+}
